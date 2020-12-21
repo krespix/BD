@@ -36,6 +36,7 @@ namespace BD
             this.closeButton = new System.Windows.Forms.Button();
             this.tableName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableNameTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AddingTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@ namespace BD
             this.AddingTable.AllowUserToResizeColumns = false;
             this.AddingTable.AllowUserToResizeRows = false;
             this.AddingTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AddingTable.Location = new System.Drawing.Point(22, 34);
+            this.AddingTable.Location = new System.Drawing.Point(24, 60);
             this.AddingTable.Name = "AddingTable";
             this.AddingTable.RowHeadersVisible = false;
             this.AddingTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -55,7 +56,7 @@ namespace BD
             // 
             // AddRowButton
             // 
-            this.AddRowButton.Location = new System.Drawing.Point(22, 302);
+            this.AddRowButton.Location = new System.Drawing.Point(24, 328);
             this.AddRowButton.Name = "AddRowButton";
             this.AddRowButton.Size = new System.Drawing.Size(105, 23);
             this.AddRowButton.TabIndex = 1;
@@ -65,7 +66,7 @@ namespace BD
             // 
             // DeleteRowButton
             // 
-            this.DeleteRowButton.Location = new System.Drawing.Point(146, 302);
+            this.DeleteRowButton.Location = new System.Drawing.Point(148, 328);
             this.DeleteRowButton.Name = "DeleteRowButton";
             this.DeleteRowButton.Size = new System.Drawing.Size(115, 23);
             this.DeleteRowButton.TabIndex = 2;
@@ -75,7 +76,7 @@ namespace BD
             // 
             // editRowButton
             // 
-            this.editRowButton.Location = new System.Drawing.Point(278, 302);
+            this.editRowButton.Location = new System.Drawing.Point(280, 328);
             this.editRowButton.Name = "editRowButton";
             this.editRowButton.Size = new System.Drawing.Size(149, 23);
             this.editRowButton.TabIndex = 3;
@@ -85,7 +86,7 @@ namespace BD
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(583, 302);
+            this.closeButton.Location = new System.Drawing.Point(585, 328);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(78, 23);
             this.closeButton.TabIndex = 4;
@@ -96,7 +97,7 @@ namespace BD
             // tableName
             // 
             this.tableName.AutoSize = true;
-            this.tableName.Location = new System.Drawing.Point(19, 9);
+            this.tableName.Location = new System.Drawing.Point(21, 35);
             this.tableName.Name = "tableName";
             this.tableName.Size = new System.Drawing.Size(0, 13);
             this.tableName.TabIndex = 5;
@@ -104,18 +105,26 @@ namespace BD
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 279);
+            this.label1.Location = new System.Drawing.Point(21, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
+            // tableNameTextBox
+            // 
+            this.tableNameTextBox.Location = new System.Drawing.Point(24, 28);
+            this.tableNameTextBox.Name = "tableNameTextBox";
+            this.tableNameTextBox.Size = new System.Drawing.Size(139, 20);
+            this.tableNameTextBox.TabIndex = 7;
+            // 
             // changeTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 337);
+            this.ClientSize = new System.Drawing.Size(689, 366);
+            this.Controls.Add(this.tableNameTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableName);
             this.Controls.Add(this.closeButton);
@@ -127,7 +136,6 @@ namespace BD
             this.Name = "changeTable";
             this.Text = "changeTable";
             this.Activated += new System.EventHandler(this.changeTable_Activated);
-
             ((System.ComponentModel.ISupportInitialize)(this.AddingTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,5 +151,6 @@ namespace BD
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label tableName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tableNameTextBox;
     }
 }

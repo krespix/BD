@@ -81,6 +81,7 @@ namespace BD
 
         public void FillDataGrid(Table table)
         {
+            tableNameTextBox.Text = table.Name;
             tableName.Text = table.Name;
             AddRow(table.Fields.Count);
             DataGridViewRow currentRow;
@@ -123,8 +124,22 @@ namespace BD
 
         }
 
+        private void renameTable()
+        {
+            try
+            {
+                Program.currentDB.RenameTable(changeTable.table.Name, tableNameTextBox.Text);
+                changeTable.table.Name = tableNameTextBox.Text;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
         private void closeButton_Click(object sender, EventArgs e)
         {
+            renameTable();
             this.Close();
         }
 
